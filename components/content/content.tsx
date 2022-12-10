@@ -39,6 +39,7 @@ export const ContentBlock = styled.div`
         white-space: normal;
         word-wrap: break-word;
         line-height: 28px;
+        width: 100%;
         @media (max-width: 768px) {
             padding-left: 30px;
         }
@@ -58,12 +59,21 @@ export const ContentBlock = styled.div`
         li {
             font-size: 15px;
             line-height: 30px;
-            color: #454bc5;
+            color: #6270b3;
             font-weight: 700;
             margin-left: 15px;
+            list-style: inside;
+            span {
+                font-size: 12px;
+                color: #999;
+                font-weight: 300;
+                margin-left: 15px;
+            }
 
             &:hover {
                 text-decoration: underline;
+                span {
+                }
             }
         }
     }
@@ -100,8 +110,8 @@ const PrevBlock = styled.div`
         object-fit: cover;
     }
     span {
-        color: #454bc5;
-        font-weight: 400;
+        color: #6270b3;
+        font-weight: 700;
         text-align: left;
     }
 `;
@@ -118,35 +128,42 @@ const NextBlock = styled.div`
         object-fit: cover;
     }
     span {
-        color: #454bc5;
-        font-weight: 400;
+        color: #6270b3;
+        font-weight: 700;
         text-align: right;
     }
 `;
 
-const init = () => {
-    const container = document.querySelector(".content-wrapper");
-
-    container.scrollTo({ top: 0, behavior: "smooth" });
-};
+interface dirContent {
+    title?: string;
+    idx?: number;
+}
 
 const Content = ({ slug }: any) => {
-    init();
     const dispatch = useDispatch();
     const { blogs, blog } = useSelector((state: RootStore) => state);
-    let prev = { title: "", idx: -1 };
-    let next = { title: "", idx: -1 };
+
+    let prev: dirContent = { title: "", idx: -1 };
+    let next: dirContent = { title: "", idx: -1 };
 
     useEffect(() => {
         dispatch<any>(getBlog(slug, blogs));
+        const container = document.querySelector(".content-wrapper");
+        if (container !== null) {
+            container.scrollTo({ top: 0, behavior: "smooth" });
+        }
     }, [dispatch, slug, blogs]);
 
-    blogs.map((el, idx) => {
+    blogs.map((el: any, idx: number) => {
         if (el.title === slug) {
-            prev.title = blogs[idx - 1].title;
-            prev.idx = idx - 1;
-            next.title = blogs[idx + 1].title;
-            next.idx = idx + 1;
+            if (idx - 1 > 0) {
+                prev.title = blogs[idx - 1].title;
+                prev.idx = idx - 1;
+            }
+            if (idx + 1 <= blogs.length - 1) {
+                next.title = blogs[idx + 1].title;
+                next.idx = idx + 1;
+            }
         }
     });
 

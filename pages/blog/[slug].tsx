@@ -8,7 +8,7 @@ const Blog = () => {
     const router = useRouter();
     const { slug } = router.query;
     return (
-        <Layout>
+        <Layout slug={slug}>
             <Head>
                 <title>Blog</title>
                 <meta

@@ -18,7 +18,7 @@ const AsideWrapper = styled.aside`
         display: none;
     }
     .tag-title {
-        padding: 0 0 20px 20px;
+        padding: 0 0 20px 2vw;
         font-size: 20px;
         font-weight: 700;
     }
@@ -54,7 +54,6 @@ const filterCategory = (blogs: IBlog[]) => {
 const Aside = () => {
     const dispatch = useDispatch();
     const { blogs } = useSelector((state: RootStore) => state);
-
     useEffect(() => {
         dispatch<any>(getHomeBlogs());
     }, [dispatch]);

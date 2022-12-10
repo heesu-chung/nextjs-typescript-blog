@@ -8,6 +8,7 @@ import {
 } from "../reducers/blogReducer";
 
 import { GET_HOME_BLOGS, IGetHomeBlogsType } from "../reducers/blogsReducer";
+import { IBlog } from "../Types";
 
 export const getHomeBlogs =
     () => async (dispatch: Dispatch<IGetHomeBlogsType>) => {
@@ -34,7 +35,7 @@ export const getHomeBlogs =
     };
 
 export const getBlog =
-    (title: string | string[] | undefined, blogs: []) =>
+    (title: string | string[] | undefined, blogs: IBlog[]) =>
     async (dispatch: Dispatch<IGetBlogType>) => {
         try {
             const blog = [...blogs].filter((el: any) => title === el.title);

@@ -1,17 +1,10 @@
 import type { NextPage } from "next";
 import styled from "styled-components";
 import Head from "next/head";
-import Image from "next/image";
-
-import { Provider } from "react-redux";
-import store from "../redux/store";
 
 import Layout from "../components/Layout";
-import Aside from "../components/global/aside";
-import Content from "../components/content/content";
-import Header from "../components/global/header";
-import Footer from "../components/global/footer";
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useState } from "react";
+import IndexList from "../components/content/indexList";
 
 const AppWrapper = styled.section`
     width: 100%;
@@ -24,10 +17,6 @@ const checkInnerWidth = (): number => {
 };
 
 const Home: NextPage = () => {
-    const [innerWidth, setInnerWidth] = useState(0);
-
-    useLayoutEffect(() => {}, []);
-
     return (
         <Layout>
             <Head>
@@ -38,6 +27,7 @@ const Home: NextPage = () => {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
+            <IndexList />
         </Layout>
     );
 };

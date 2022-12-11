@@ -65,7 +65,7 @@ export const ContentBlock = styled.div`
             list-style: inside;
             span {
                 font-size: 12px;
-                color: #999;
+                color: #555;
                 font-weight: 300;
                 margin-left: 15px;
             }

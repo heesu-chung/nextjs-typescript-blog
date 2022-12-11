@@ -10,6 +10,7 @@ const Blog = () => {
     return (
         <Layout slug={slug}>
             <Head>
+                <html lang="ko" />
                 <title>Dev_log</title>
 
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />

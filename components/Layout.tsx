@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import Header from "./global/header";
 import Aside from "./global/aside";
@@ -7,10 +8,14 @@ import store from "../redux/store";
 const AppWrapper = styled.section`
     width: 100%;
     display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     flex-direction: row;
 `;
 
-export default function Layout({ children }: any) {
+function Layout({ children }: any) {
     return (
         <Provider store={store}>
             <Header />
@@ -22,3 +27,5 @@ export default function Layout({ children }: any) {
         </Provider>
     );
 }
+
+export default React.memo(Layout);

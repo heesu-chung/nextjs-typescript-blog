@@ -7,6 +7,10 @@ const HeaderWrapper = styled.header`
     width: 100%;
     height: 8vh;
     display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     align-items: center;
     border-bottom: 1px solid #eee;
 `;
@@ -15,6 +19,10 @@ const HeaderBlock = styled.div`
     width: 96vw;
     margin: 0 auto;
     display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     flex-direction: row;
     align-items: center;
 
@@ -24,6 +32,10 @@ const HeaderBlock = styled.div`
 const HeaderLogoWrapper = styled.div`
     flex: 3;
     display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     justify-content: flex-start;
     span {
         font-size: 26px;
@@ -173,4 +185,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default React.memo(Header);

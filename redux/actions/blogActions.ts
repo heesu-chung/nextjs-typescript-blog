@@ -15,7 +15,6 @@ export const getHomeBlogs =
         const blog = db.collection("posts");
         try {
             let arr: any = [];
-
             await blog
                 .orderBy("date", "desc")
                 .get()

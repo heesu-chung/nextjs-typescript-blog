@@ -24,7 +24,7 @@ const SubmitBtn = ({ title, subTitle, category, contents }: ICreateData) => {
             date: new Date().toLocaleString(),
             number: 0,
         };
-
+        console.log(data);
         dispatch<any>(createBlog(data));
 
         router.push(

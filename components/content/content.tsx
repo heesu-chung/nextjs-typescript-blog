@@ -85,6 +85,10 @@ export const ContentBlock = styled.div`
 
 const NextPrevWrapper = styled.div`
     display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     flex-direction: row;
     align-items: center;
     margin: 50px auto;
@@ -101,6 +105,10 @@ const NextPrevWrapper = styled.div`
 
 const PrevBlock = styled.div`
     display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     justify-content: flex-start;
     cursor: pointer;
     img {
@@ -118,6 +126,10 @@ const PrevBlock = styled.div`
 
 const NextBlock = styled.div`
     display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     justify-content: flex-end;
 
     cursor: pointer;

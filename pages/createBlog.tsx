@@ -1,4 +1,4 @@
-import React, { useRef, useState, useMemo } from "react";
+import React, { useRef, useState, useMemo, useCallback } from "react";
 import styled from "styled-components";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
@@ -14,6 +14,10 @@ const CreateListWrapper = styled.div`
     overflow-y: scroll;
     overflow-x: hidden;
     display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     flex-direction: column;
     @media (max-width: 800px) {
         width: 90%;
@@ -30,6 +34,10 @@ const CreateListWrapper = styled.div`
             font-weight: 500;
             cursor: pointer;
             transition: 0.3s all ease-in-out;
+            -webkit-transition: 0.3s all ease-in-out;
+            -o-transition: 0.3s all ease-in-out;
+            -moz-transition: 0.3s all ease-in-out;
+            -ms-transition: 0.3s all ease-in-out;
         }
     }
 `;
@@ -63,6 +71,10 @@ export const SubmitButton = styled.button`
     letter-spacing: 1px;
     cursor: pointer;
     transition: 0.5s all ease;
+    -webkit-transition: 0.5s all ease;
+    -o-transition: 0.5s all ease;
+    -moz-transition: 0.5s all ease;
+    -ms-transition: 0.5s all ease;
     &:hover {
         background: #6270b3;
         color: white;
@@ -78,6 +90,7 @@ const CreateBlog = () => {
     const handleTitle = (e) => {
         setTitle(e.target.value);
     };
+
     const [subTitle, setSubTitle] = useState("");
     const handleSubTitle = (e) => {
         setSubTitle(e.target.value);
@@ -85,6 +98,7 @@ const CreateBlog = () => {
 
     const [category, setCategory] = useState("");
     const [categoryArr, setCategoryArr] = useState([]);
+
     const handleCategory = (e) => {
         setCategory(e.target.value);
     };
@@ -164,4 +178,4 @@ const CreateBlog = () => {
     );
 };
 
-export default CreateBlog;
+export default React.memo(CreateBlog);

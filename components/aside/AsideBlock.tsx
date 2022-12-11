@@ -7,6 +7,10 @@ const AsideBlockWrapper = styled.div`
     position: relative;
     width: 100%;
     display: flex;
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     align-items: flex-start;
 `;
 
@@ -14,6 +18,10 @@ const AsideMarker = styled.span<{ isOpen: boolean }>`
     width: 7px;
     height: 20px;
     transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+    -ms-transition: 0.3s all ease;
     margin-left: 1.2vw;
     ${(props) =>
         props.isOpen
@@ -55,6 +63,10 @@ const AsideContentList = styled.li<{ selected: boolean }>`
     color: #999;
     cursor: pointer;
     transition: 0.3s all ease-in-out;
+    -webkit-transition: 0.3s all ease-in-out;
+    -o-transition: 0.3s all ease-in-out;
+    -moz-transition: 0.3s all ease-in-out;
+    -ms-transition: 0.3s all ease-in-out;
     &:hover {
         color: #404972;
     }

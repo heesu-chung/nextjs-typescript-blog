@@ -1,7 +1,7 @@
 # Typescript/Next.js 블로그 
 
 ## Demo Link  
-[https://nextjs-typescript-blog-tau.vercel.app/createBlog](https://nextjs-typescript-blog-tau.vercel.app/createBlog)
+[https://nextjs-typescript-blog-tau.vercel.app/](https://nextjs-typescript-blog-tau.vercel.app/)
   
   
 ## 제작기간  

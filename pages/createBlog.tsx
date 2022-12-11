@@ -130,7 +130,9 @@ const CreateBlog = () => {
         }),
         []
     );
-
+    if (typeof window === "undefined") {
+        return null;
+    }
     return (
         <Layout>
             <CreateListWrapper>

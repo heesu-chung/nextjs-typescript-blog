@@ -31,7 +31,9 @@ export default class MyDocument extends Document {
     render() {
         return (
             <Html lang="ko">
-                <Head />
+                <Head>
+                    <meta name="robots" content="index, follow" />
+                </Head>
                 <body>
                     <Main />
                     <NextScript />

@@ -1,7 +1,7 @@
-import React, { useRef, useState, useMemo, useCallback } from "react";
+import React, { useState, useMemo } from "react";
 import styled from "styled-components";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
+// import ReactQuill from "react-quill";
+// import "react-quill/dist/quill.snow.css";
 import Layout from "../components/Layout";
 import SubmitBtn from "../components/button/submitBtn";
 
@@ -82,7 +82,7 @@ export const SubmitButton = styled.button`
 `;
 
 const CreateBlog = () => {
-    const QuillRef = useRef<ReactQuill>();
+    // const QuillRef = useRef<ReactQuill>();
     const [contents, setContents] = useState("Contents Here...");
     const imageHandler = () => {};
 
@@ -157,7 +157,7 @@ const CreateBlog = () => {
                         </span>
                     ))}
                 </div>
-                <ReactQuill
+                {/* <ReactQuill
                     ref={(element) => {
                         if (element !== null) {
                             QuillRef.current = element;
@@ -168,7 +168,7 @@ const CreateBlog = () => {
                     onChange={setContents}
                     theme="snow"
                     style={{ height: "500px" }}
-                />
+                /> */}
                 <SubmitBtn
                     title={title}
                     subTitle={subTitle}

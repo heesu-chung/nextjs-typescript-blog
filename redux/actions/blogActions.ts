@@ -1,5 +1,5 @@
 import { Dispatch } from "redux";
-import { db } from "../../config/firebase";
+import { db } from "../../firebase/firebase";
 
 import {
     GET_BLOG,

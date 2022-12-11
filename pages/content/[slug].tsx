@@ -18,7 +18,7 @@ const ListContent = () => {
                     name="viewport"
                     content="width=device-width, initial-scale=1.0"
                 />
-                <meta name="robots" content="index, follow" />
+                <meta name="robots" content="noindex" />
                 <meta
                     name="description"
                     content={`This is the article lists of ${slug}`}

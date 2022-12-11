@@ -21,6 +21,7 @@ const Home: NextPage = () => {
     return (
         <Layout>
             <Head>
+                <html lang="ko" />
                 <title>Dev_log</title>
 
                 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
